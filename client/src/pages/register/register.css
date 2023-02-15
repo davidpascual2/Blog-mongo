@@ -1,55 +1,55 @@
-.login{
+.register{
    height: calc(100vh - 50px); 
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    background: 
-   /* linear-gradient(
+   linear-gradient(
     /* this makes background more transparent */
-    /* rgba(255,255,255,0.5),  */
-    /* rgba(255,255,255,0.5) */
-    /* ),  */
-     url('../../assets/background-login.avif');
+    rgba(255,255,255,0.5), 
+    rgba(255,255,255,0.5)
+    ), 
+     url('../../assets/retrosupply-jLwVAUtLOAQ-unsplash.jpg');
     background-size: cover;
 }
 
-.loginTitle{
+.registerTitle{
     font-size: 50px;
 }
 
-.loginForm{
+.registerForm{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.loginForm > label{
+.registerForm > label{
     margin: 10px 0;
 }
 
-.loginInput{
+.registerInput{
     padding: 10px;
     background-color: white;
     border: none;
     border-radius: 5px;
 }
 
-.loginButton{
+.registerButton{
     margin-top: 20px;
     cursor: pointer;
-    background-color: lightcoral;
+    background-color: teal;
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
-.loginRegisterButton{
+.registerLoginButton{
     position: absolute;
     top: 60px;
     right: 20px;
-    background-color: teal;
+    background-color: lightcoral;
     cursor: pointer;
     border: none;
     padding: 10px;
