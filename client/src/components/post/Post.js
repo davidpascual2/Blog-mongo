@@ -1,31 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './post.css'
 
-export default function Post() {
+export default function Post({post}) {
+   {/* <img className='postImage' src='https://www.w3schools.com/css/img_mountains.jpg' alt=''
+        /> */}
   return (
+    
     <div className='post'>
-        <img className='postImage' src='https://www.w3schools.com/css/img_mountains.jpg' alt=''
+      {post.photo && (
+        <img 
+          className='postImage' 
+          src={post.photo} 
+          alt=''
         />
+
+      )}
+      
         <div className="postInfo">
             <div className="postCats">
-                <span className="postCat">Music</span>
-                <span className="postCat">Life</span>
+                <span className="postCat">
+                  {post.categories.map((c)=>(
+                  <span className="postCat">{c.name}</span>
+                ))}</span>
             </div>
-            <span className="postTitle">
-                lorem ipsum dolor sit amet 
-            </span>
+            <Link to={`/post/${post._id}`} className='link' >
+            <span className="postTitle">{post.title}</span>
+
+            </Link>
             <hr />
-            <span className="postDate">1 hour ago</span>
+            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
         </div>
 
-        <p className='postDesc'>lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit 
-        amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor
-         sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor s
-         it amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit
-          amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem 
-          ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem 
-          ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet 
-          lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+        <p className='postDesc'>{post.desc}
         </p>
        
     </div>
