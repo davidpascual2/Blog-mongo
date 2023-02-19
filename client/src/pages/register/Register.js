@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './register.css'
+import './register.css';
+
+//===========================
 
 export default function Register() {
+
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,17 +17,19 @@ export default function Register() {
     setError(false);
     try{
       const res = await axios.post('http://localhost:3001/api/auth/register', {
-        username: username,
-        email: email,
-        password: password,
+        username,
+        email,
+        password,
       });
       res.data && window.location.replace('/login') //can navigate be used here?
+      console.log(res)
     }catch(err){
       setError(true);
     }
 
-
+    
   }
+  
 
   return (
     <div className='register'>
@@ -32,14 +37,28 @@ export default function Register() {
         <form action="" className="registerForm" onSubmit={handleSubmit} >
 
             <label>Username</label>
-            <input className='registerInput' type='text' placeholder='enter your username...' onChange={e=>setUsername(e.target.value)}
+            <input 
+              className='registerInput' 
+              type='text' 
+              placeholder='enter your username...' 
+              onChange={e=>setUsername(e.target.value)}
             />
 
             <label>Email</label>
-            <input className='registerInput' type='text' placeholder='enter your email...' onChange={e=>setEmail(e.target.value)}/>
+            <input 
+              className='registerInput' 
+              type='text' placeholder='enter your email...' 
+              onChange={e=>setEmail(e.target.value)}
+            />
 
             <label>Password</label>
-            <input className='registerInput' type='password' placeholder='enter your password...'onChange={e=>setPassword(e.target.value)}/>
+            <input 
+              className='registerInput' 
+              type='password' 
+              placeholder='enter your password...'
+              onChange={e=>setPassword(e.target.value)}
+            />
+
             <button className="registerButton" type="submit">Register</button>
         </form>
         <button className="registerLoginButton">

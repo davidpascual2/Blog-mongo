@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,6 +9,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
+import { Context } from "./context/Context";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
@@ -60,6 +62,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
+  const {user} = useContext(Context)
 
 
 
