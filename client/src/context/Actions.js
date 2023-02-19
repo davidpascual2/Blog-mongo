@@ -26,9 +26,9 @@ export const LoginStart = (userCredentials) => ({
     type: "LOGIN_FAILURE",
   });
   
-//   export const Logout = () => ({
-//     type: "LOGOUT",
-//   });
+  export const Logout = () => ({
+    type: "LOGOUT",
+  });
   
 //   export const UpdateStart = (userCredentials) => ({
 //     type: "UPDATE_START",

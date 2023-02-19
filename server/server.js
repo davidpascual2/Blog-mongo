@@ -9,10 +9,12 @@ const userRoute = require('./routes/users')
 const postRoute = require('./routes/posts')
 const categoryRoute = require('./routes/categories');
 const multer = require('multer');
+const path = require('path'); //needed to uplaod images thru assets folder
 
 
 
-app.use(express.json())
+app.use(express.json());
+app.use('/images', express.static(path.join(__dirname, "/images"))) //makes assets folder public?
 
 const connectionString =
     process.env.MONGODB_URI || 'mongodb://localhost:27017/socialmediaDB';

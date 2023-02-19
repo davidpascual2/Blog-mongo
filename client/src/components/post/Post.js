@@ -5,13 +5,16 @@ import './post.css'
 export default function Post({post}) {
    {/* <img className='postImage' src='https://www.w3schools.com/css/img_mountains.jpg' alt=''
         /> */}
+
+  const PF = 'http://localhost:3001/images/'
+
   return (
     
     <div className='post'>
       {post.photo && (
         <img 
           className='postImage' 
-          src={post.photo} 
+          src= {PF + post.photo} 
           alt=''
         />
 

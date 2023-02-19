@@ -18,6 +18,8 @@ import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 
 const Layout = () => {
+
+  
   return(
     <>
       <Navbar />
@@ -27,6 +29,7 @@ const Layout = () => {
 };
 
 const router = createBrowserRouter([
+  
   {
     path: '/',
     element: <Layout />,
@@ -41,23 +44,25 @@ const router = createBrowserRouter([
       },
       {
         path:'/write',
-        element:<Write />
+        element:<Write />,
+        canActivate: (user) => user ? true: <Navigate to="/login" />,
       },
       {
         path:'/settings',
-        element:<Settings />
+        element:<Settings />,
+        canActivate: (user) => user ? true: <Navigate to="/register" /> ,
       },
     ]
   },
   {
     path: '/register',
     element: <Register/>,
-    // canActivate: () => !user ? true : <Navigate to="/" />
+    canActivate: (user) => user ? <Navigate to="/" /> : true,
   },
   {
     path: '/login',
     element: <Login/>,
-    // canActivate: () => !user ? true : <Navigate to="/" />
+    canActivate: (user) => user ? <Navigate to="/" /> : true,
   },
 ]);
 
