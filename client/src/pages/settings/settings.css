@@ -86,3 +86,8 @@
     cursor: pointer;
 }
 
+.success{
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}
