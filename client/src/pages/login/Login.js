@@ -1,11 +1,12 @@
 import React, { useContext, useRef } from 'react';
-import './login.css';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import axios from 'axios';
+import './login.css';
 
 export default function Login() {
 
+  const navigate = useNavigate()
   const userRef = useRef();
   const passwordRef = useRef();
   const { user, dispatch, isFetching, error} = useContext(Context); //?
@@ -20,6 +21,7 @@ export default function Login() {
       });
       console.log(user)
       dispatch({ type:"LOGIN_SUCCESS", payload: res.data });
+      navigate("/");
     }catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
     }

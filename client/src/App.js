@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import {
+  Link,
   createBrowserRouter,
   RouterProvider,
   Router, //???
@@ -45,24 +46,26 @@ const router = createBrowserRouter([
       {
         path:'/write',
         element:<Write />,
-        canActivate: (user) => user ? true: <Navigate to="/login" />,
+        // canActivate: (user) => user ? true: <Navigate to="/login" />,
+        
       },
       {
         path:'/settings',
         element:<Settings />,
-        canActivate: (user) => user ? true: <Navigate to="/register" /> ,
+        // canActivate: (user) => user ? true: <Navigate to="/register" /> ,
+
       },
     ]
   },
   {
     path: '/register',
     element: <Register/>,
-    canActivate: (user) => user ? <Navigate to="/" /> : true,
+    // canActivate: () => user ? <Navigate to="/" /> : true,
   },
   {
     path: '/login',
     element: <Login/>,
-    canActivate: (user) => user ? <Navigate to="/" /> : true,
+    // canActivate: () => user ? <Navigate to="/" /> : true,
   },
 ]);
 
@@ -82,29 +85,12 @@ function App() {
   );
 }
 
-
-//============================================
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar />
-//       <Routes>
-//         <Route exact path='/' element={<Home />} />
-//         <Route exact path='/register' element={<Register />} />
-//         <Route exact path='/login' element={<Login />} />
-//         <Route exact path='/write' element={<Write />} />
-//       </Routes>
-//     </Router>
-    
-//   );
-// }
-
-//=========================//
-
-
-
-
-
-
 export default App;
+
+
+
+
+
+
+
+

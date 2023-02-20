@@ -5,12 +5,12 @@
    justify-content: center;
    align-items: center;
    background: 
-   /* linear-gradient(
+   linear-gradient(
     /* this makes background more transparent */
-    /* rgba(255,255,255,0.5),  */
-    /* rgba(255,255,255,0.5) */
-    /* ),  */
-     url('../../assets/background-login.avif');
+    rgba(255,255,255,0.5), 
+    rgba(255,255,255,0.5)
+    ), 
+     url('../../assets/login-background.jpg');
     background-size: cover;
 }
 
