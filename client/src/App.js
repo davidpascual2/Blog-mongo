@@ -10,6 +10,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
+import Sidebar from "./components/sidebar/Sidebar";
 import { Context } from "./context/Context";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
@@ -24,6 +25,7 @@ const Layout = () => {
   return(
     <>
       <Navbar />
+      {/* <Sidebar /> */}
       <Outlet />
     </>
   );

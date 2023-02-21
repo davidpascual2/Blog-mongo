@@ -67,4 +67,27 @@
     margin-left: 10px;
     cursor: pointer;
 }
+/* =============================== */
+.leftContainer{
+    position: sticky;
+    top: 0;
+    height: 100%;
+}
+
+.leftList{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    margin-left: 15rem;
+    /* align-items: center; */
+    margin-right: 30px;
+}
+.leftListItem{
+    font-size: 25px;
+    margin-top: 20px;
+    /* font-weight: 1; */
+    cursor: pointer;
+
+}
 

@@ -18,9 +18,9 @@
     gap: 20px;
 
 }
-
-.topCenter{
-    flex:6;
+/* IMPORTANT!!! MAKES SIDE BAR SMALLER? */
+.topCenter{ 
+    flex:3;
 }
 
 .topIcon{
@@ -61,7 +61,7 @@
     color: #777;
     cursor: pointer;
     margin-left: 15px; */
-    background-color: royalblue;
+    background-color: #00acee;
     width: 80px;
     height: 40px;
     border-radius: 5px;
@@ -75,9 +75,9 @@
 }
 
 .topPostIcon:hover{
-    color: royalblue;
+    color: #00acee;
     background-color: white;
-    border: 1px solid royalblue;
+    border: 1px solid #00acee;
 
 } 
 
