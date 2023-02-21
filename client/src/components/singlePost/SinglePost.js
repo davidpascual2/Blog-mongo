@@ -82,7 +82,7 @@ export default function SinglePost() {
             <span className="singlePostAuthor">
                Author: 
                <Link className='link' to={`/?user=${post.username}`}>
-                <b>{post.username}</b>
+                <b> {post.username}</b>
                </Link>
             </span>
             <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>

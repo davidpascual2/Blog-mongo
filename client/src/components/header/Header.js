@@ -9,7 +9,7 @@ export default function Header() {
         <span className='headerTitleSm'>React & Node</span>
         <span className='headerTitleLg'>Blog</span>
       </div>
-      <img className='headerImg' src='https://www.w3schools.com/css/img_5terre.jpg' alt='' />
+      {/* <img className='headerImg' src='https://www.w3schools.com/css/img_5terre.jpg' alt='' /> */}
     </div>
   )
 }

@@ -16,18 +16,19 @@ export default function Navbar() {
     return (
         <div className='top'>
             <div className="topLeft">
-                <i className="topIcon fa-brands fa-linkedin"></i>
+                {/* <i className="topIcon fa-brands fa-linkedin"></i>
                 <i className="topIcon fa-brands fa-instagram"></i>
                 <i className="topIcon fa-brands fa-twitter"></i>
-                <i className="topIcon fa-brands fa-pinterest"></i>
+                <i className="topIcon fa-brands fa-pinterest"></i> */}
+                <img src='' alt="" />
             </div>
             <div className="topCenter">
                 <ul className="topList">
                     <li className="topListItem">
                         <Link className='link' to='/'>HOME</Link>
                     </li>
-                    <li className="topListItem" ><Link className='link' to='/'>ABOUT</Link></li>
-                    <li className="topListItem"><Link className='link' to='/'>CONTACT</Link></li>
+                    {/* <li className="topListItem" ><Link className='link' to='/'>ABOUT</Link></li> */}
+                    {/* <li className="topListItem"><Link className='link' to='/'>CONTACT</Link></li> */}
                     {/* <li className="topListItem"><Link className='link' to='/write'>WRITE</Link></li> */}
                     {/* <li className="topListItem">
                         {user ? (
@@ -43,12 +44,13 @@ export default function Navbar() {
             <div className="topRight">
                 {
                     user ? (
-                        <Link to='/settings'>
-                            <img 
+                        <Link to='/settings' className='link'>
+                            {/* <img 
                                 className='topImg' 
                                 src={PF+user.profilePic} 
                                 alt="" 
-                            />
+                            /> */}
+                            {user.username}
                         </Link>
 
                     ) : (
