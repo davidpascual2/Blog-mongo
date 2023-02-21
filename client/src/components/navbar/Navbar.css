@@ -12,10 +12,10 @@
 
 .topLeft, .topRight {
     flex: 3;
-    /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
 }
 
@@ -55,9 +55,31 @@
 
 }
 
-.topSearchIcon{
-    font-size: 18px;
+.topPostIcon{
+    /* font-size: 18px;
     color: #777;
     cursor: pointer;
-    margin-left: 15px;
+    margin-left: 15px; */
+    background-color: royalblue;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    border: 1px solid white;
+    color: white;
+
+}
+
+.topPostIcon:hover{
+    color: royalblue;
+    background-color: white;
+    border: 1px solid royalblue;
+
+} 
+
+.topPostImg {
+    width: 50px;
 }

@@ -24,19 +24,19 @@ export default function Settings() {
             password,
 
         };
-        if (file){
-            const data =new FormData();
-            const filename= Date.now() + file.name; //prevents something with images with same name
-            data.append('name', filename);
-            data.append('file', file);
-            updatedUser.profilePic = filename;
-            try{
-                await axios.post('http://localhost:3001/api/upload', data);
-            } catch (err){
-                console.log(err)
-                //write user error
-            }
-        }
+        // if (file){
+        //     const data =new FormData();
+        //     const filename= Date.now() + file.name; //prevents something with images with same name
+        //     data.append('name', filename);
+        //     data.append('file', file);
+        //     updatedUser.profilePic = filename;
+        //     try{
+        //         await axios.post('http://localhost:3001/api/upload', data);
+        //     } catch (err){
+        //         console.log(err)
+        //         //write user error
+        //     }
+        // }
         try {
             const res = await axios.put('http://localhost:3001/api/users/'+user._id, updatedUser);
             setSuccess(true);
@@ -55,7 +55,7 @@ export default function Settings() {
                     <span className="settingsDeleteTitle">Delete Account</span>
                 </div>
                 <form action="" className="settingsForm" onSubmit={ handleSubmit }>
-                    <label htmlFor="">Profile Picture</label>
+                    {/* <label htmlFor="">Profile Picture</label>
                     <div className="settingsPP">
                         <img 
                             src={file ? URL.createObjectURL(file) : PF+user.profilePic}
@@ -70,7 +70,7 @@ export default function Settings() {
                             style={{display:"none"}}
                             onChange={(e) => setFile(e.target.files[0])}
                         />
-                    </div>
+                    </div> */}
 
                     <label>Username</label>
                     <input type='text' placeholder={user.username} onChange={e=>setUsername(e.target.value)} />

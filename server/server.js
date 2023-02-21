@@ -22,7 +22,6 @@ const connectionString =
 mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    // useFindAndModify: true,
     // useCreateIndex: true,
 }).then(console.log('connected to mongodb'))
 .catch((err) => console.log(err));

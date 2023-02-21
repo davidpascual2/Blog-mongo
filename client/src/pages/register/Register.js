@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './register.css';
 
 //===========================
 
 export default function Register() {
+
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -21,8 +23,9 @@ export default function Register() {
         email,
         password,
       });
-      res.data && window.location.replace('/login') //can navigate be used here?
+      // res.data && window.location.replace('/login') //can navigate be used here?
       console.log(res)
+      navigate('/login');
     }catch(err){
       setError(true);
     }

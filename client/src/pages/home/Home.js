@@ -26,25 +26,13 @@ export default function Home() {
     fetchPosts();
   }, [search]); // fire useEffect once page opens
 
-
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const res = await axios.get('http://localhost:3001/api/posts')
-  //     console.log(res)
-  //   }
-  //   fetchPosts()
-
-  // },[]) //fire useEffect once page opens
-
   return (
     <div>
 
       <Header />
       <div className='home'>
         <Posts posts={posts}/>
-        <Sidebar />
+        {/* <Sidebar /> */}
         
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
+import Delete from '../../assets/addPost.png'
 import './navbar.css';
 
 export default function Navbar() {
@@ -27,7 +28,14 @@ export default function Navbar() {
                     </li>
                     <li className="topListItem" ><Link className='link' to='/'>ABOUT</Link></li>
                     <li className="topListItem"><Link className='link' to='/'>CONTACT</Link></li>
-                    <li className="topListItem"><Link className='link' to='/write'>WRITE</Link></li>
+                    {/* <li className="topListItem"><Link className='link' to='/write'>WRITE</Link></li> */}
+                    {/* <li className="topListItem">
+                        {user ? (
+                            <Link className='link' to='/write'>WRITE</Link>
+                        ) : (
+                            <Link className='link' to='/login'>WRITE</Link>
+                        )}
+                    </li> */}
                     <li className="topListItem" onClick={ handleLogout }>{user && 'LOGOUT'}</li>
                 </ul>
                 
@@ -54,7 +62,14 @@ export default function Navbar() {
                         </ul>
                     )
                 }
-                <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+                {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
+                <span class="topPostIcon"> 
+                        {user ? (
+                            <Link className='link' to='/write'><b>Post</b></Link>
+                        ) : (
+                            <Link className='link' to='/login'></Link>
+                        )}
+                </span>
                 
             </div>
         </div>
