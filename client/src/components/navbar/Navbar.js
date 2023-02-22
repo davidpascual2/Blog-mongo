@@ -66,11 +66,19 @@ export default function Navbar() {
                     )
                 }
                 {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
-                <span class="topPostIcon"> 
+                <span class="topPostContainer"> 
                         {user ? (
-                            <Link className='link' to='/write'><b>Post</b></Link>
+                            <Link className='link' to='/write'>
+                                <span className='topPostIcon'>
+                                    <b>Post</b>
+                                </span>
+                            </Link>
                         ) : (
-                            <Link className='link' to='/login'></Link>
+                            <Link className='link' to='/login'>
+                                <span className='topPostIcon'>
+                                    <b>Post</b>
+                                </span> 
+                            </Link>
                         )}
                 </span>
                 

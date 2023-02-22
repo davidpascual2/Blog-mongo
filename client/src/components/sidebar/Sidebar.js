@@ -65,11 +65,16 @@ export default function Sidebar() {
     // </div>
     <div className="leftContainer">
         <ul className="leftList">
-            <li className="leftListItem"><Link className='link' to='/'>Home</Link></li>
+            <li className="leftListItem">
+                <i className="sidebarIcon fa-solid fa-house-user"></i>
+                <Link className='link' to='/'>Home</Link>
+            </li>
             {/* <li className="leftListItem" ><Link className='link' to={`/?user=${post.username}`}></Link></li> */}
             <li className="leftListItem" >
+                <i className="sidebarIcon fa-regular fa-user"></i>
                 {
                     user ? (
+                        
                         <Link to={`/?user=${user.username}`} className='link'>
                             Profile
                         </Link>
@@ -81,8 +86,13 @@ export default function Sidebar() {
                     )
                 }
             </li>
-            <li className="leftListItem"><Link className='link' to='/'>Bookmarks</Link></li>
-            <li className="leftListItem"><Link className='link' to='/write'>Chirp</Link></li>
+            <li className="leftListItem">
+                <i className="sidebarIcon fa-regular fa-bookmark"></i>
+                <Link className='link' to='/'>Bookmarks</Link>
+            </li>
+            <li className="leftListItem">
+                <Link className='link' to='/write'>Chirp</Link>
+            </li>
             {/* <li className="topListItem">
                 {user ? (
                     <Link className='link' to='/write'>WRITE</Link>

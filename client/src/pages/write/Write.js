@@ -51,7 +51,7 @@ export default function Write() {
         )}
         
         <form className="writeForm" onSubmit={handleSubmit}>
-            <div className="writeFormGroup">
+            {/* <div className="writeFormGroup">
                 <label htmlFor='fileInput'>
                     <i className=" writeIcon fa-solid fa-plus"></i>
                 </label>
@@ -69,11 +69,12 @@ export default function Write() {
                     autoFocus={true} 
                     onChange={e=>setTitle(e.target.value)}
                 />
-            </div>
+            </div> */}
 
             <div className="writeFormGroup">
                 <textarea 
-                    placeholder='tell your story' 
+                    autoFocus={true}
+                    placeholder='tell your story...' 
                     type='text' 
                     className='writeInput writeText'
                     onChange={e=>setDesc(e.target.value)}

@@ -63,8 +63,8 @@
 }
 
 .sidebarIcon{
-    flex: 16px;
-    margin-left: 10px;
+    /* flex: 16px;
+    margin-left: 10px; */
     cursor: pointer;
 }
 /* =============================== */

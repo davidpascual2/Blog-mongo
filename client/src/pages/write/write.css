@@ -23,6 +23,9 @@
     display: flex;
     align-items: center;
 
+    justify-content: center;
+    
+
 }
 
 .writeIcon{
@@ -43,7 +46,10 @@
     font-size: 30px;
     border: none;
     padding: 20px;
-    width: 70vw;
+    /* width: 70vw; */
+
+    width: 30vw;
+    background-color: aliceblue;
 
 }
 
@@ -53,7 +59,11 @@
 
 .writeText{
     font-size: 20px;
-    height: 100vh;
+    /* height: 100vh; */
+
+    height: 25vh;
+    border: 1px solid lightblue;
+    border-radius: 5px;
 }
 
 .writeSubmit{
@@ -61,7 +71,7 @@
     top: 20px;
     right: 50px;
     color: white;
-    background-color: teal;
+    background-color: #00acee;
     padding: 10px;
     border: none;
     border-radius: 10px;

@@ -8,10 +8,10 @@ export const RightMenu = () => {
     <div className="rightContainer">
         <ul className="rightList">
             <li className="rightListItem">
-                <Link className='link' to='/'>Home</Link>
+                <Link className='link' to='/'>cat 0 </Link>
             </li>
-            <li className="rightListItem" ><Link className='link' to='/settings'>Profile</Link></li>
-            <li className="rightListItem"><Link className='link' to='/'>Bookmarks</Link></li>
+            <li className="rightListItem" ><Link className='link' to='/settings'>cat 1</Link></li>
+            <li className="rightListItem"><Link className='link' to='/'>cat 2</Link></li>
             <li className="rightListItem"><Link className='link' to='/write'>Chirp</Link></li>
             {/* <li className="topListItem">
                 {user ? (

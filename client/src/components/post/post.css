@@ -3,7 +3,13 @@
     /* margin: 0px 25px 40px 25px; */
 
     border-bottom: 1px solid lightslategray;
-    padding: 0px 25px 40px 25px;
+    /* padding: 0px 25px 40px 25px; */
+    padding: 15px 25px 30px 25px;
+    cursor: pointer;
+}
+
+.post:hover{
+background-color: aliceblue;
 }
 
 .postImage{
@@ -15,9 +21,12 @@
 
 .postInfo{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
+    /* margin-top: 15px; */
+    justify-content: space-between;
 }
 
 .postCat{
@@ -30,7 +39,8 @@
     cursor: pointer;
 }
 
-.postTitle{
+/* .postTitle */
+.postUsername{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 24px;
     font-weight: 700;
@@ -38,12 +48,16 @@
     cursor: pointer;
 }
 
+.postUsername:hover{
+    text-decoration: 1px #444 underline;
+}
+
 .postDate{
     font-family: 'Lora', serif;
     font-style: italic;
     font-size: 13px;
     color: #999;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .postDesc{
