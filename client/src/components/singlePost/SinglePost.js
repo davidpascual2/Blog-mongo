@@ -11,7 +11,7 @@ export default function SinglePost() {
   const [post, setPost] = useState({});
   const { user } = useContext(Context);
   const PF = 'http://localhost:3001/images/';
-  const [title, setTitle] = useState("");
+  // const [title, setTitle] = useState(""); //!!!!
   const [desc, setDesc ] = useState("");
   const [updateMode, setUpdateMode] = useState(false)
 
@@ -19,8 +19,9 @@ export default function SinglePost() {
     const getPost = async ()=>{
       const res = await axios.get('http://localhost:3001/api/posts/' + path);
       setPost(res.data);
-      setTitle(res.data.title)
+      // setTitle(res.data.title) //!!!!
       setDesc(res.data.desc)
+      console.log(res)
     };
     getPost()
   }, [path])
@@ -38,7 +39,7 @@ export default function SinglePost() {
     try {
       await axios.put(`http://localhost:3001/api/posts/${post._id}`, 
         { username: user.username, 
-          title, 
+          // title, //!!!!
           desc,
         });
       setUpdateMode(false) // window.location.reload();
@@ -59,15 +60,15 @@ export default function SinglePost() {
             updateMode ? ( 
               <input 
                 type='text' 
-                value={title} 
+                // value={title} //!!!!
                 className='singlePostTitleInput'
                 autoFocus 
-                onChange={(e) => setTitle(e.target.value)}
+                // onChange={(e) => setTitle(e.target.value)} //!!!!
               />  
 
             ) : (
               <h1 className="singlePostTitle"> 
-                {title}
+                {/* {title} */}
                 {post.username === user?.username && (
                   <div className="singlePostEdit">
                       <i className=" singlePostIcon fa-solid fa-pen-to-square" onClick={() =>setUpdateMode(true)}></i>
@@ -80,7 +81,7 @@ export default function SinglePost() {
 
           <div className="singlePostInfo">
             <span className="singlePostAuthor">
-               Author: 
+                
                <Link className='link' to={`/?user=${post.username}`}>
                 <b> {post.username}</b>
                </Link>

@@ -10,7 +10,19 @@
     z-index: 999;
 }
 
-.topLeft, .topRight {
+.topLeft{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #00acee;
+
+}
+
+.topRight {
     flex: 3;
     display: flex;
     align-items: center;

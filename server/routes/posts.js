@@ -7,11 +7,11 @@ const Post = require('../models/Posts');
 
 //CREATE POST
 router.post('/', async (req, res) =>{
+    console.log(req.body)
     const newPost = new Post(req.body);
     try{
         const savedPost = await newPost.save();
         res.status(200).json(savedPost)
-
     } catch(err){
         res.status(500).json(err)
     }

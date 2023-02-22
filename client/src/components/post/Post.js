@@ -1,27 +1,11 @@
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+// import axios from 'axios';
+import React from 'react';
+import { Link } from 'react-router-dom';
 // import { Context } from '../../context/Context';
 import './post.css'
 
 export default function Post({post}) {
-  // const {user, dispatch} = useContext(Context);
-  // const [post, setPost] = useState({});
-  const [title, setTitle] = useState("");
-  const [desc, setDesc ] = useState("");
-  const location = useLocation()
-  const path = location.pathname.split('/')[2];// use two becase it is the third indexed item in path
-
-  useEffect(()=>{
-    const getPost = async ()=>{
-      const res = await axios.get('http://localhost:3001/api/posts/' + path);
-      // setPost(res.data);
-      setTitle(res.data.title)
-      setDesc(res.data.desc)
-    };
-    getPost()
-  }, [path])
-
+ 
   const PF = 'http://localhost:3001/images/'
 
   return (

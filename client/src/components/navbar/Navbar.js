@@ -21,7 +21,7 @@ export default function Navbar() {
                 <i className="topIcon fa-brands fa-twitter"></i>
                 <i className="topIcon fa-brands fa-pinterest"></i> */}
                 <img src='' alt="" />
-                <p><b>Chirp!</b></p>
+                <p><b>Chirp</b></p>
             </div>
             <div className="topCenter">
                 <ul className="topList">

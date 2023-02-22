@@ -31,9 +31,9 @@ export default function Home() {
 
       <Header />
       <div className='home'>
-        <Sidebar />
-        <Posts posts={posts}/>
-        <RightMenu />
+        <Sidebar className='homeLeft'/>
+        <Posts posts={posts} className='homeCenter'/>
+        <RightMenu className='homeRight'/>
         
       </div>
 
