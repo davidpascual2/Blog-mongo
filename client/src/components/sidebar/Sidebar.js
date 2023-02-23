@@ -20,16 +20,18 @@ export default function Sidebar() {
     //     };
     //     getPost()
     //   }, []);
+    //==============================================//
+    // const [cats, setCats] = useState([]);
+    // useEffect(()=>{
+    //     const getCats = async () =>
+    //     {
+    //         const res = await axios.get('http://localhost:3001/api/categories')
+    //         setCats(res.data)
+    //     }
+    //     getCats()
+    // },[])
 
-    const [cats, setCats] = useState([]);
-    useEffect(()=>{
-        const getCats = async () =>
-        {
-            const res = await axios.get('http://localhost:3001/api/categories')
-            setCats(res.data)
-        }
-        getCats()
-    },[])
+    //==============================================//
 
   return (
     // <div className='sidebar'>

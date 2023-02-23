@@ -1,4 +1,4 @@
-const Post = require('./Posts'); //referenced in controllers/postController
-// const Comment = require('./Comment'); //referenced in controllers/commentController
+const Post = require('./Post'); //referenced in controllers/postController
+const User = require('./User'); //referenced in controllers/commentController
 
-module.exports = { Post };
+module.exports = { Post, User };
