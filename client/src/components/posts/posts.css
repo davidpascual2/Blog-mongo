@@ -7,6 +7,9 @@
     flex-wrap:wrap ;
     /* margin: 20px; */
     justify-content: center;
+    flex:3;
+    background-color: lightblue;
+    align-items: center;
 
     /* border-left: 1px solid lightslategrey;
     border-right: 1px solid lightslategray; */

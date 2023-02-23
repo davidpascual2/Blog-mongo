@@ -66,12 +66,13 @@ export default function Sidebar() {
     <div className="leftContainer">
         <ul className="leftList">
             <li className="leftListItem">
-                <i className="sidebarIcon fa-solid fa-house-user"></i>
+                {/* <img className="sidebarIcon" src='../../assets/homePageIcon' alt=''/> */}
+                <img src='' />
                 <Link className='link' to='/'>Home</Link>
             </li>
             {/* <li className="leftListItem" ><Link className='link' to={`/?user=${post.username}`}></Link></li> */}
             <li className="leftListItem" >
-                <i className="sidebarIcon fa-regular fa-user"></i>
+                {/* <i className="sidebarIcon fa-regular fa-user"></i> */}
                 {
                     user ? (
                         
@@ -87,7 +88,8 @@ export default function Sidebar() {
                 }
             </li>
             <li className="leftListItem">
-                <i className="sidebarIcon fa-regular fa-bookmark"></i>
+                {/* <i className="sidebarIcon fa-regular fa-bookmark"></i> */}
+                <img src='' alt=''/>
                 <Link className='link' to='/'>Bookmarks</Link>
             </li>
             <li className="leftListItem">

@@ -6,17 +6,31 @@ export const RightMenu = () => {
   return (
     
     <div className="rightContainer">
-        {/* <ul className="rightList">
-            <li className="rightListItem">
-                <Link className='link' to='/'>cat 0 </Link>
+      <div className='categories'>
+        <span>
+          <b>Categories</b>
+        </span>
+        <div className="rightCatList">
+            <li className="rightCatItem">
+                <Link className='link' to='/'>LIFE</Link>
             </li>
-            <li className="rightListItem" ><Link className='link' to='/settings'>cat 1</Link></li>
-            <li className="rightListItem"><Link className='link' to='/'>cat 2</Link></li>
-            <li className="rightListItem"><Link className='link' to='/write'>Chirp</Link></li>
-
-            
-        </ul> */}
-                
+            <li className="rightCatItem" >
+              <Link className='link' to='/settings'>MUSIC</Link>
+            </li>
+            <li className="rightCatItem">
+              <Link className='link' to='/'>MOVIES</Link>
+            </li>
+            <li className="rightCatItem">
+              <Link className='link' to='/write'>WORK</Link>
+            </li>
+            <li className="rightCatItem">
+              <Link className='link' to='/write'>ADULTING</Link>
+            </li>
+            <li className="rightCatItem">
+              <Link className='link' to='/write'>SCHOOL</Link>
+            </li>
+        </div>
+      </div>     
     </div>
   )
 }

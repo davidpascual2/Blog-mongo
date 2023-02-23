@@ -1,0 +1,23 @@
+.rightContainer{
+    flex: 3;
+    /* background-color: yellow; */
+    padding-top: 15px;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f0f0;
+    border-radius: 10px;
+    padding: 10px 10px 20px 20px;
+    width: 150px;
+}
+
+.rightCatList{
+    list-style: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.rightCatItem{
+    padding-top: 10px;
+}
