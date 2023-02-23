@@ -6,9 +6,10 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors')
 
+const routes = require('./routes');
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users')
-const postRoute = require('./routes/posts')
+// const postRoute = require('./routes/posts')
 const categoryRoute = require('./routes/categories');
 const multer = require('multer');
 const path = require('path'); //needed to uplaod images thru assets folder
@@ -39,9 +40,10 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 //===================================//
 
 app.use(cors())
+app.use(routes);
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
-app.use('/api/posts', postRoute);
+// app.use('/api/posts', postRoute);
 app.use('/api/categories', categoryRoute);
 
 
