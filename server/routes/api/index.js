@@ -6,7 +6,7 @@ const userRoutes = require('./userRoutes');
 const categoryRoutes = require('./categoryRoutes');
 
 router.use('/posts', postRoutes);
-router.use('/auth', authRoutes); //('/auth')??? //('/api/auth')??
+router.use('/auth', authRoutes); //('/api/auth')??
 router.use('/users', userRoutes);
 router.use('/categories', categoryRoutes);
 

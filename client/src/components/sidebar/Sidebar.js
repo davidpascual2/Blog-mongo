@@ -20,7 +20,7 @@ export default function Sidebar() {
     //     };
     //     getPost()
     //   }, []);
-    //==============================================//
+    //=================== GET CATEGORIES ===========================//
     // const [cats, setCats] = useState([]);
     // useEffect(()=>{
     //     const getCats = async () =>
