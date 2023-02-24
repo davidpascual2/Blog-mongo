@@ -68,22 +68,24 @@ export default function Sidebar() {
     <div className="leftContainer">
         <ul className="leftList">
             <li className="leftListItem">
-                {/* <img className="sidebarIcon" src='../../assets/homePageIcon' alt=''/> */}
-                <img src='' />
-                <Link className='link' to='/'>Home</Link>
+                <Link className='link' to='/'>
+                    <i class="fa-solid fa-house-user"></i>
+                    Home
+                </Link>
             </li>
-            {/* <li className="leftListItem" ><Link className='link' to={`/?user=${post.username}`}></Link></li> */}
+    
             <li className="leftListItem" >
-                {/* <i className="sidebarIcon fa-regular fa-user"></i> */}
                 {
                     user ? (
                         
                         <Link to={`/?user=${user.username}`} className='link'>
+                            <i className="sidebarIcon fa-regular fa-user"></i>
                             Profile
                         </Link>
 
                     ) : (
                         <Link to={`/login`} className='link'>
+                            <i className="sidebarIcon fa-regular fa-user"></i>
                             Profile
                         </Link>
                     )
@@ -91,21 +93,48 @@ export default function Sidebar() {
             </li>
             <li className="leftListItem">
                 {/* <i className="sidebarIcon fa-regular fa-bookmark"></i> */}
-                <img src='' alt=''/>
-                <Link className='link' to='/'>Bookmarks</Link>
+                
+                <Link className='link' to=''> 
+                    <i className="sidebarIcon fa-regular fa-bookmark"></i>
+                    Bookmarks
+                </Link>
             </li>
-            <li className="leftListItem">
+            {/* <li className="leftListItem">
                 <Link className='link' to='/write'>Chirp</Link>
-            </li>
-            {/* <li className="topListItem">
-                {user ? (
-                    <Link className='link' to='/write'>WRITE</Link>
-                ) : (
-                    <Link className='link' to='/login'>WRITE</Link>
-                )}
+            </li> */}
+            {/* <li class="leftListItem2"> 
+                        {user ? (
+                            <Link className='link' to='/write'>
+                                <span className='chirpButton'>
+                                    <b>Post</b>
+                                </span>
+                            </Link>
+                        ) : (
+                            <Link className='link' to='/login'>
+                                <span className='chirpButton'>
+                                    <b>Chirp</b>
+                                </span> 
+                            </Link>
+                        )}
             </li> */}
             
         </ul>
+
+        <div class="leftListItem2"> 
+            {user ? (
+                <Link className='link' to='/write'>
+                    <span className='chirpButton'>
+                        <b>Chirp</b>
+                    </span>
+                </Link>
+            ) : (
+                <Link className='link' to='/login'>
+                    <span className='chirpButton'>
+                        <b>Chirp</b>
+                    </span> 
+                </Link>
+            )}
+        </div>
                 
     </div>
   )

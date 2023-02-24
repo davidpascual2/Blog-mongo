@@ -16,12 +16,9 @@ export default function Navbar() {
     return (
         <div className='top'>
             <div className="topLeft">
-                {/* <i className="topIcon fa-brands fa-linkedin"></i>
-                <i className="topIcon fa-brands fa-instagram"></i>
-                <i className="topIcon fa-brands fa-twitter"></i>
-                <i className="topIcon fa-brands fa-pinterest"></i> */}
-                <img src='' alt="" />
-                <p><b>Chirp</b></p>
+                <Link to='/' className='link'>
+                    <p><b>Chirp</b></p>
+                </Link>
             </div>
             <div className="topCenter">
                 <ul className="topList">
