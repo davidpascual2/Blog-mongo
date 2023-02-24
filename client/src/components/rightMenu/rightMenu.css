@@ -12,6 +12,8 @@
     border-radius: 10px;
     padding: 10px 10px 20px 20px;
     width: 150px;
+    position: sticky;
+    top: 65px;
 }
 
 .rightCatList{

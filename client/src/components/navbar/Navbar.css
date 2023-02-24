@@ -22,6 +22,11 @@
 
 }
 
+.logo:hover{
+    color: #0195cf;
+
+}
+
 .topRight {
     flex: 3;
     display: flex;

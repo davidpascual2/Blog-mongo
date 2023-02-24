@@ -69,8 +69,10 @@ export default function Sidebar() {
         <ul className="leftList">
             <li className="leftListItem">
                 <Link className='link' to='/'>
-                    <i class="fa-solid fa-house-user"></i>
-                    Home
+                    <div className='iconContainer'>
+                        <i class="fa-solid fa-house-user"></i>
+                        <p>Home</p>
+                    </div>
                 </Link>
             </li>
     
@@ -78,25 +80,29 @@ export default function Sidebar() {
                 {
                     user ? (
                         
-                        <Link to={`/?user=${user.username}`} className='link'>
-                            <i className="sidebarIcon fa-regular fa-user"></i>
-                            Profile
+                        <Link to={`/?user=${user.username}`} className='link' >
+                            <div className='iconContainer'>
+                                <i className="sidebarIcon fa-regular fa-user"></i>
+                                <p>Profile</p>
+                            </div>
                         </Link>
 
                     ) : (
                         <Link to={`/login`} className='link'>
-                            <i className="sidebarIcon fa-regular fa-user"></i>
-                            Profile
+                            <div className='iconContainer'>
+                                <i className="sidebarIcon fa-regular fa-user"></i>
+                                <p>Profile</p>
+                            </div>
                         </Link>
                     )
                 }
             </li>
             <li className="leftListItem">
-                {/* <i className="sidebarIcon fa-regular fa-bookmark"></i> */}
-                
                 <Link className='link' to=''> 
-                    <i className="sidebarIcon fa-regular fa-bookmark"></i>
-                    Bookmarks
+                    <div className='iconContainer'>
+                        <i className="sidebarIcon fa-regular fa-bookmark"></i> 
+                        <p>Saved</p>
+                    </div>
                 </Link>
             </li>
             {/* <li className="leftListItem">

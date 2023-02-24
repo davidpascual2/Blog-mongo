@@ -17,38 +17,27 @@ export default function Navbar() {
         <div className='top'>
             <div className="topLeft">
                 <Link to='/' className='link'>
-                    <p><b>Chirp</b></p>
+                    <b className='logo'>Chirp</b>
                 </Link>
             </div>
+
             <div className="topCenter">
-                <ul className="topList">
+                {/* <ul className="topList">
                     <li className="topListItem">
                         <Link className='link' to='/'>HOME</Link>
                     </li>
-                    {/* <li className="topListItem" ><Link className='link' to='/'>ABOUT</Link></li> */}
-                    {/* <li className="topListItem"><Link className='link' to='/'>CONTACT</Link></li> */}
-                    {/* <li className="topListItem"><Link className='link' to='/write'>WRITE</Link></li> */}
-                    {/* <li className="topListItem">
-                        {user ? (
-                            <Link className='link' to='/write'>WRITE</Link>
-                        ) : (
-                            <Link className='link' to='/login'>WRITE</Link>
-                        )}
-                    </li> */}
-                    <li className="topListItem" onClick={ handleLogout }>{user && 'LOGOUT'}</li>
-                </ul>
-                
+                    
+                    <li className="topListItem" onClick={ handleLogout }>
+                        {user && 'LOGOUT'}
+                    </li>
+                </ul> */}
             </div>
+
             <div className="topRight">
                 {
                     user ? (
                         <Link to='/settings' className='link'>
-                            {/* <img 
-                                className='topImg' 
-                                src={PF+user.profilePic} 
-                                alt="" 
-                            /> */}
-                            {user.username}
+                            <b>{user.username}</b>
                         </Link>
 
                     ) : (
@@ -62,8 +51,8 @@ export default function Navbar() {
                         </ul>
                     )
                 }
-                {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
-                <span class="topPostContainer"> 
+                
+                {/* <span class="topPostContainer"> 
                         {user ? (
                             <Link className='link' to='/write'>
                                 <span className='topPostIcon'>
@@ -76,6 +65,20 @@ export default function Navbar() {
                                     <b>Post</b>
                                 </span> 
                             </Link>
+                        )}
+                </span> */}
+                <span className="topPostContainer" onClick={ handleLogout }> 
+                        {user ? (
+                            // <Link className='link' to=''>
+                            //     <span className='topPostIcon'>
+                            //         <b>Logout</b>
+                            //     </span>
+                            // </Link>
+                            <span className='topPostIcon' onClick={ handleLogout }>
+                                <b>Logout</b>
+                            </span>
+                        ) : (
+                            <div></div>
                         )}
                 </span>
                 
