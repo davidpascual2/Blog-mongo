@@ -39,36 +39,36 @@ export default function Register() {
         <span className="registerTitle">Register</span>
         <form action="" className="registerForm" onSubmit={handleSubmit} >
 
-            <label>Username</label>
+            {/* <label>Username</label> */}
             <input 
               className='registerInput' 
               type='text' 
-              placeholder='enter your username...' 
+              placeholder='enter a username...' 
               onChange={e=>setUsername(e.target.value)}
             />
 
-            <label>Email</label>
+            {/* <label>Email</label> */}
             <input 
               className='registerInput' 
               type='text' placeholder='enter your email...' 
               onChange={e=>setEmail(e.target.value)}
             />
 
-            <label>Password</label>
+            {/* <label>Password</label> */}
             <input 
               className='registerInput' 
               type='password' 
-              placeholder='enter your password...'
+              placeholder='enter a password...'
               onChange={e=>setPassword(e.target.value)}
             />
 
             <button className="registerButton" type="submit">Register</button>
+            {error && <span className='registerErr'>Something Went Wrong!</span>} 
+            <span>Already have an account? <Link to='/login'>Login</Link></span>
         </form>
-        <button className="registerLoginButton">
+        {/* <button className="registerLoginButton">
           <Link className='link' to='/login'>Login</Link>
-        </button>
-        {error && <span className='registerErr'>Something Went Wrong!</span>} 
-
+        </button> */}
     </div>
   )
 }
