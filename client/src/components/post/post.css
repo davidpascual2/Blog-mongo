@@ -1,8 +1,6 @@
 .post{
     width: 385px;
-    /* margin: 0px 25px 40px 25px; */
     border-bottom: 1px solid #cdd3d9;
-    /* padding: 0px 25px 40px 25px; */
     padding: 15px 25px 30px 25px;
     cursor: pointer;
     border-left: 1px solid #cdd3d9;
@@ -22,11 +20,8 @@ background-color: aliceblue;
 
 .postInfo{
     display: flex;
-    /* flex-direction: column; */
-
     flex-direction: row;
     align-items: flex-end;
-    /* margin-top: 15px; */
     justify-content: space-between;
 }
 
@@ -40,7 +35,6 @@ background-color: aliceblue;
     cursor: pointer;
 }
 
-/* .postTitle */
 .postUsername{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
@@ -58,7 +52,6 @@ background-color: aliceblue;
     font-style: italic;
     font-size: 13px;
     color: #999;
-    /* margin-top: 15px; */
 }
 
 .postDesc{
@@ -72,7 +65,4 @@ background-color: aliceblue;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-
-    /* text-align: center; */
-
 }

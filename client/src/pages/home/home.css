@@ -3,19 +3,7 @@
     
 }
 
-/* .homeLeft{
-flex: 1;
-}
-
-.homeCenter{
-flex: 6;
-}
-
-.homeRight{
-flex: 3;
-} */
-
-/* ======================================= */
+/* ============================================ */
 
 @media screen and (max-width: 500px) {
     .home{

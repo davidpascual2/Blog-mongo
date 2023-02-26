@@ -67,8 +67,8 @@
     margin-left: 10px; */
     cursor: pointer;
 }
-/* =============================== */
 
+/* =============================== */
 
 .leftContainer{
     position: sticky;
@@ -79,29 +79,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-
     padding-right: 2rem;
 }
 
 .leftList{
-    /* display: flex; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
     list-style: none;
-    /* margin-left: 15rem; */
-    /* align-items: center; */
     margin-right: 30px;
 }
 .leftListItem{
     font-size: 25px;
-    /* margin-top: 20px; */
-    /* font-weight: 1; */
     cursor: pointer;
-
     margin-top: 20px;
     margin-bottom: 10px;
     padding:10px;
-
 }
 
 .iconContainer{
@@ -117,8 +107,6 @@
 
 .leftListItem2{
     font-size: 25px;
-    /* margin-top: 20px; */
-    /* font-weight: 1; */
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -183,12 +171,9 @@
 @media screen and (max-width: 500px) {
     .leftListItem2{
         font-size: 25px;
-        /* margin-top: 20px; */
-        /* font-weight: 1; */
         cursor: pointer;
         margin-top: 20px;
         margin-bottom: 10px;
-        /* padding: 10px; */
         padding-bottom: 20px;
     }
 }

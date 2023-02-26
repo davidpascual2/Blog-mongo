@@ -19,12 +19,10 @@
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     color: #00acee;
-
 }
 
 .logo:hover{
     color: #0195cf;
-
 }
 
 .topRight {
@@ -33,9 +31,9 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-
 }
-/* IMPORTANT!!! MAKES SIDE BAR SMALLER? */
+
+/* IMPORTANT! MAKES SIDE BAR SMALLER? */
 .topCenter{ 
     flex:3;
 }
@@ -55,7 +53,6 @@
     cursor: pointer;
 }
 
-
 .topList{
     display: flex;
     justify-content: center;
@@ -69,15 +66,9 @@
     font-size: 18px;
     font-weight: 300;
     cursor: pointer;
-
-
 }
 
 .topPostIcon{
-    /* font-size: 18px;
-    color: #777;
-    cursor: pointer;
-    margin-left: 15px; */
     background-color: #00acee;
     width: 80px;
     height: 40px;
@@ -89,7 +80,6 @@
     border: 1px solid white;
     color: white;
     cursor: pointer;
-
 }
 
 .topPostIcon:hover{

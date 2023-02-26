@@ -21,9 +21,6 @@
 }
 
 .loginForm{
-    /* margin-top: 20px;
-    display: flex;
-    flex-direction: column; */
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -69,15 +66,3 @@
     cursor: not-allowed;
     background-color: #74d7ff;  
 }
-
-/* .loginRegisterButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-} */

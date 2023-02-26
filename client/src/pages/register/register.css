@@ -21,9 +21,6 @@
 }
 
 .registerForm{
-    /* margin-top: 20px;
-    display: flex;
-    flex-direction: column; */
     display: flex;
     flex-direction: column;
     padding: 50px;
@@ -49,7 +46,6 @@
     background-color: white;
     border: none;
     border-bottom: 1px solid grey;
-    /* border-radius: 5px; */
 }
 
 .registerButton{
@@ -65,18 +61,6 @@
 .registerButton:hover{
     background-color: #0193cd;
 }
-
-/* .registerLoginButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: lightcoral;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-} */
 
 .registerErr{
     color: red;

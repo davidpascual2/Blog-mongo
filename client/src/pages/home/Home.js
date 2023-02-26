@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../../components/header/Header';
 import Posts from '../../components/posts/Posts';
 import Sidebar from '../../components/sidebar/Sidebar';
 import './home.css';
@@ -11,8 +10,6 @@ export default function Home() {
 
   const [posts, setPosts] = useState([]);
   const {search} = useLocation(); //take search property from console
-
-  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -26,17 +23,14 @@ export default function Home() {
     fetchPosts();
   }, [search]); // fire useEffect once page opens
 
+//============================================
   return (
     <div>
-
-      <Header />
       <div className='home'>
         <Sidebar className='homeLeft'/>
         <Posts posts={posts} className='homeCenter'/>
         <RightMenu className='homeRight'/>
-        
       </div>
-
     </div>
      
   )

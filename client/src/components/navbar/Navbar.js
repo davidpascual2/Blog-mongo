@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
-import Delete from '../../assets/addPost.png'
 import './navbar.css';
 
 export default function Navbar() {
     
     const {user, dispatch} = useContext(Context);
-    const PF = 'http://localhost:3001/images/'
 
     const handleLogout = () =>{
         dispatch({ type:"LOGOUT" })
     }
+
+//============================================
 
     return (
         <div className='top'>
@@ -21,17 +21,7 @@ export default function Navbar() {
                 </Link>
             </div>
 
-            <div className="topCenter">
-                {/* <ul className="topList">
-                    <li className="topListItem">
-                        <Link className='link' to='/'>HOME</Link>
-                    </li>
-                    
-                    <li className="topListItem" onClick={ handleLogout }>
-                        {user && 'LOGOUT'}
-                    </li>
-                </ul> */}
-            </div>
+            <div className="topCenter"></div>
 
             <div className="topRight">
                 {
@@ -52,28 +42,8 @@ export default function Navbar() {
                     )
                 }
                 
-                {/* <span class="topPostContainer"> 
-                        {user ? (
-                            <Link className='link' to='/write'>
-                                <span className='topPostIcon'>
-                                    <b>Post</b>
-                                </span>
-                            </Link>
-                        ) : (
-                            <Link className='link' to='/login'>
-                                <span className='topPostIcon'>
-                                    <b>Post</b>
-                                </span> 
-                            </Link>
-                        )}
-                </span> */}
                 <span className="topPostContainer" onClick={ handleLogout }> 
                         {user ? (
-                            // <Link className='link' to=''>
-                            //     <span className='topPostIcon'>
-                            //         <b>Logout</b>
-                            //     </span>
-                            // </Link>
                             <span className='topPostIcon' onClick={ handleLogout }>
                                 <b>Logout</b>
                             </span>
@@ -81,7 +51,6 @@ export default function Navbar() {
                             <div></div>
                         )}
                 </span>
-                
             </div>
         </div>
 
