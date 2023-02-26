@@ -74,7 +74,6 @@
     position: sticky;
     top: 50px;
     height: 100%;
-    /* background-color: coral; */
     display: flex;
     flex: 3;
     flex-direction: column;
@@ -143,4 +142,165 @@
     background-color: #008bc1;
 }
 
+/* ================= MEDIA QUERIES ==================== */
+
+
+/* ============ LEFT SIDE =============== */
+
+@media screen and (max-width: 990px) {
+    .leftContainer{
+        position: sticky;
+        top: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 2rem;
+        flex: 0;
+    }
+       
+}
+
+@media screen and (max-width: 500px) {
+    .leftContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        position: sticky;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+    }
+       
+}
+
+@media screen and (max-width: 500px) {
+    .leftList{
+        display: flex;
+        flex-direction: row !important;
+        padding-bottom: 20px;
+
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .leftListItem2{
+        font-size: 25px;
+        /* margin-top: 20px; */
+        /* font-weight: 1; */
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        /* padding: 10px; */
+        padding-bottom: 20px;
+        
+    }
+       
+}
+
+
+@media screen and (max-width: 1024px) {
+    .sidebarName{
+        display: none;
+    }
+       
+}
+
+@media screen and (max-width: 1024px) {
+    .chirpButton{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .buttonText{
+        font-size: 16px;
+    }
+       
+}
+
+/* ============= HOME ===============*/
+
+@media screen and (max-width: 990px) {
+    .home{
+        display: flex;
+        justify-content: center;
+
+    }
+       
+}
+
+@media screen and (max-width: 990px) {
+    .rightContainer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home{
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center;
+        min-width: 390px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sidebarName{
+        display: none;
+    } 
+}
+
+ /* ============ CHIRP BUTTON ================ */
+
+@media screen and (max-width: 500px) {
+    .chirpButton{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .buttonText{
+        font-size: 16px;
+    }
+       
+}
+
+@media screen and (max-width: 768px) {
+    /* .posts{
+        
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+       
+        justify-content: center;
+       
+        background-color: rgb(220, 235, 241);
+        align-items: center;
+      
+        margin-right: 10rem; 
+    } */
+       
+}
+
+@media screen and (max-width: 425px) {
+    /* .posts{
+       
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+       
+        justify-content: center;
+        flex: 3 1;
+        background-color: yellow;
+        align-items: center;
+        width: 100%;
+    } */
+       
+}
 

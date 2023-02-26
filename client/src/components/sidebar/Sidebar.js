@@ -71,7 +71,7 @@ export default function Sidebar() {
                 <Link className='link' to='/'>
                     <div className='iconContainer'>
                         <i class="fa-solid fa-house-user"></i>
-                        <p>Home</p>
+                        <p className='sidebarName'>Home</p>
                     </div>
                 </Link>
             </li>
@@ -83,7 +83,7 @@ export default function Sidebar() {
                         <Link to={`/?user=${user.username}`} className='link' >
                             <div className='iconContainer'>
                                 <i className="sidebarIcon fa-regular fa-user"></i>
-                                <p>Profile</p>
+                                <p className='sidebarName'>Profile</p>
                             </div>
                         </Link>
 
@@ -91,7 +91,7 @@ export default function Sidebar() {
                         <Link to={`/login`} className='link'>
                             <div className='iconContainer'>
                                 <i className="sidebarIcon fa-regular fa-user"></i>
-                                <p>Profile</p>
+                                <p className='sidebarName'>Profile</p>
                             </div>
                         </Link>
                     )
@@ -101,7 +101,7 @@ export default function Sidebar() {
                 <Link className='link' to=''> 
                     <div className='iconContainer'>
                         <i className="sidebarIcon fa-regular fa-bookmark"></i> 
-                        <p>Saved</p>
+                        <p className='sidebarName'>Saved</p>
                     </div>
                 </Link>
             </li>
@@ -130,7 +130,7 @@ export default function Sidebar() {
             {user ? (
                 <Link className='link' to='/write'>
                     <span className='chirpButton'>
-                        <b>Chirp</b>
+                        <b className='buttonText'>Chirp</b>
                     </span>
                 </Link>
             ) : (
