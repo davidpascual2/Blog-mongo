@@ -49,6 +49,7 @@ export default function Settings() {
 
     return (
         <div className='settings'>
+            <Sidebar /> 
             <div className="settingsWrapper">
                 <div className="settingsTitle">
                     <span className="settingsUpdateTitle">Update Your Account</span>
@@ -85,7 +86,6 @@ export default function Settings() {
                     {success && <span className='success'>Profile has been updated!</span>}
                 </form>
             </div>
-            <Sidebar /> 
         </div>
     )
 }

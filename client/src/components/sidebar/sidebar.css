@@ -144,9 +144,6 @@
 
 /* ================= MEDIA QUERIES ==================== */
 
-
-/* ============ LEFT SIDE =============== */
-
 @media screen and (max-width: 990px) {
     .leftContainer{
         position: sticky;
@@ -159,7 +156,6 @@
         padding-right: 2rem;
         flex: 0;
     }
-       
 }
 
 @media screen and (max-width: 500px) {
@@ -167,13 +163,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-
         position: sticky;
         bottom: 0;
         background-color: white;
         width: 100%;
     }
-       
 }
 
 @media screen and (max-width: 500px) {
@@ -181,12 +175,10 @@
         display: flex;
         flex-direction: row !important;
         padding-bottom: 20px;
-
         width: 100%;
         justify-content: space-around;
     }
 }
-
 
 @media screen and (max-width: 500px) {
     .leftListItem2{
@@ -198,55 +190,6 @@
         margin-bottom: 10px;
         /* padding: 10px; */
         padding-bottom: 20px;
-        
-    }
-       
-}
-
-
-@media screen and (max-width: 1024px) {
-    .sidebarName{
-        display: none;
-    }
-       
-}
-
-@media screen and (max-width: 1024px) {
-    .chirpButton{
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-
-    .buttonText{
-        font-size: 16px;
-    }
-       
-}
-
-/* ============= HOME ===============*/
-
-@media screen and (max-width: 990px) {
-    .home{
-        display: flex;
-        justify-content: center;
-
-    }
-       
-}
-
-@media screen and (max-width: 990px) {
-    .rightContainer{
-        display: none;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .home{
-        display: flex;
-        flex-direction: column-reverse !important;
-        align-items: center;
-        min-width: 390px;
     }
 }
 
@@ -256,51 +199,35 @@
     } 
 }
 
- /* ============ CHIRP BUTTON ================ */
-
 @media screen and (max-width: 500px) {
     .chirpButton{
         width: 70px;
         height: 70px;
         border-radius: 50%;
     }
-
     .buttonText{
         font-size: 16px;
     }
-       
 }
 
-@media screen and (max-width: 768px) {
-    /* .posts{
-        
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-       
-        justify-content: center;
-       
-        background-color: rgb(220, 235, 241);
-        align-items: center;
-      
-        margin-right: 10rem; 
-    } */
-       
+@media screen and (max-width: 1024px) {
+    .sidebarName{
+        display: none;
+    }
 }
 
-@media screen and (max-width: 425px) {
-    /* .posts{
-       
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-       
-        justify-content: center;
-        flex: 3 1;
-        background-color: yellow;
-        align-items: center;
-        width: 100%;
-    } */
-       
+@media screen and (max-width: 1024px) {
+    .chirpButton{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .buttonText{
+        font-size: 16px;
+    }    
 }
+
+
+
+
 

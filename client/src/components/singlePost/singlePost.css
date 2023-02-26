@@ -102,11 +102,15 @@
 .singlePostButton{
     width: 100px;
     border: none;
-    background-color: teal;
+    background-color: #00acee;
     padding: 5px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-end;
     margin: 20px ;
+}
+
+.singlePostButton:hover{
+    background-color: #0190c9;
 }

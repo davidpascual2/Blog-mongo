@@ -14,3 +14,23 @@ flex: 6;
 .homeRight{
 flex: 3;
 } */
+
+/* ======================================= */
+
+@media screen and (max-width: 500px) {
+    .home{
+        display: flex;
+        flex-direction: column-reverse !important;
+        align-items: center;
+        min-width: 390px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .home{
+        display: flex;
+        justify-content: center;
+
+    }
+       
+}

@@ -49,36 +49,24 @@ export default function SinglePost() {
   return (
     <div className='singlePost'>
         <div className="singlePostWrapper">
-          {post.photo && (
+          {/* {post.photo && (
             <img  
               className='singlePostImg' 
               src={PF + post.photo} 
               alt="" 
               />
-          )}
-          {
-            updateMode ? ( 
-              <input 
-                type='text' 
-                // value={title} //!!!!
-                className='singlePostTitleInput'
-                autoFocus 
-                // onChange={(e) => setTitle(e.target.value)} //!!!!
-              />  
-
-            ) : (
-              <h1 className="singlePostTitle"> 
-                {/* {title} */}
-                {post.username === user?.username && (
-                  <div className="singlePostEdit">
-                      <i className=" singlePostIcon fa-solid fa-pen-to-square" onClick={() =>setUpdateMode(true)}></i>
-                      <i className=" singlePostIcon fa-solid fa-trash" onClick={ handleDelete }></i>
-                    </div>
-                )}
-              </h1>
-            )
-          }
-
+          )} */}
+          
+          <h1 className="singlePostTitle"> 
+            {/* {title} */}
+            {post.username === user?.username && (
+              <div className="singlePostEdit">
+                  <i className=" singlePostIcon fa-solid fa-pen-to-square" onClick={() =>setUpdateMode(true)}></i>
+                  <i className=" singlePostIcon fa-solid fa-trash" onClick={ handleDelete }></i>
+              </div>
+            )}
+          </h1>
+            
           <div className="singlePostInfo">
             <span className="singlePostAuthor">
                 
@@ -93,6 +81,7 @@ export default function SinglePost() {
               className='singlePostDescInput' 
               value={desc} 
               onChange={(e) => setDesc(e.target.value)} 
+              autoFocus={true}
             /> 
             ) : (
               <p className='singlePostDesc'>{desc}</p>
