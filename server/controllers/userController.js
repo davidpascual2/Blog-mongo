@@ -15,22 +15,18 @@ module.exports = {
                 }, {new: true} );
                 res.status(200).json(updatedUser)
 
-
-
-                
             } catch (err) {
                 console.log(err)
-                res.status(500).json(err) //someting wrong with mongodb or express server
+                res.status(500).json(err) 
             }
         } else {
-            res.status(401).json('you can only update your account!') //not allowd
+            res.status(401).json('you can only update your account!') 
         }
-
     },
 
     //DELETE
     deleteUser: async (req, res) =>{
-        if(req.body.userId === req.params.id){ //userId?
+        if(req.body.userId === req.params.id){ 
             try {
                 const user = await User.findById(req.params.id);
                 try{
@@ -46,9 +42,8 @@ module.exports = {
                 res.status(404).json('user not found')
             }
         } else {
-            res.status(401).json('you can only delete your account!') //not allowd
+            res.status(401).json('you can only delete your account!') 
         }
-
     },
 
     //GET USER

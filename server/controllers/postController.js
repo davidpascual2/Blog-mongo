@@ -67,27 +67,6 @@ module.exports = {
         }
     },
 
-    //GET ALL Posts
-    // router.get('/', async (req, res)=>{  //can query by adding "/?user='john' " to url
-    //     const username = req.query.user;
-    //     const catName = req.query.cat;
-    //     try{
-    //         let posts;
-    //         if(username){
-    //             posts = await Post.find({username: username })
-    //         } else if (catName){
-    //             posts = await Post.find({categories:{ //look in cat array
-    //                 $in:[catName], //if inside catagoryname array
-    //             }
-    //             });
-    //         } else { //if no username or cat name fetch all posts
-    //             posts = await Post.find();
-    //         }
-    //         res.status(200).json(posts)
-    //     } catch(err){
-    //         res.status(500).json(err)
-    //     }
-    // });
     getPosts: async (req, res)=>{
         const username = req.query.user;
         const catName = req.query.cat;

@@ -24,7 +24,7 @@ module.exports = {
         }
     },
 
-    //LOGIN //FIX THIS  code: 'ERR_HTTP_HEADERS_SENT'
+    //LOGIN (FIX THIS code: 'ERR_HTTP_HEADERS_SENT')
     loginUser: async (req, res)=>{
         try{
             const user = await User.findOne({username: req.body.username})
@@ -38,7 +38,7 @@ module.exports = {
             res.status(200).json(others)
         }   catch (err){
             console.log(err)
-            // res.status(500).json(err) //SOMETHING BREAKS WHEN THIS IS UN COMMENTED
+            // res.status(500).json(err) //SOMETHING BREAKS WHEN THIS IS UNCOMMENTED
         }
     },
 
