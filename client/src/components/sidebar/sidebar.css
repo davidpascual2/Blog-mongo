@@ -1,5 +1,5 @@
 .sidebar{
-    flex: 3;
+    /* flex: 3; */
     margin: 20px;
     padding-bottom: 30px;
     background-color: #fdfbfb;
@@ -63,8 +63,156 @@
 }
 
 .sidebarIcon{
-    flex: 16px;
-    margin-left: 10px;
+    /* flex: 16px;
+    margin-left: 10px; */
     cursor: pointer;
 }
+
+/* =============================== */
+
+.leftContainer{
+    position: sticky;
+    top: 50px;
+    height: 100%;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 2rem;
+}
+
+.leftList{
+    list-style: none;
+    margin-right: 30px;
+}
+.leftListItem{
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding:10px;
+}
+
+.iconContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.leftListItem:hover{
+    background-color: #f2efef;
+    border-radius: 20px;
+}
+
+.leftListItem2{
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.chirpButton {
+    background-color: #00acee;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    border: 1px solid white;
+    color: white;
+}
+
+.chirpButton:hover{
+    background-color: #008bc1;
+}
+
+/* ================= MEDIA QUERIES ==================== */
+
+@media screen and (max-width: 990px) {
+    .leftContainer{
+        position: sticky;
+        top: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 2rem;
+        flex: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .leftContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: sticky;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .leftList{
+        display: flex;
+        flex-direction: row !important;
+        padding-bottom: 20px;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .leftListItem2{
+        font-size: 25px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sidebarName{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 500px) {
+    .chirpButton{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .buttonText{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebarName{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .chirpButton{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .buttonText{
+        font-size: 16px;
+    }    
+}
+
+
+
+
 
