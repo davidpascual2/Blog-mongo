@@ -1,0 +1,20 @@
+{
+  "name": "blog-post-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && npm run devstart\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidpascual2/Blog-mongo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidpascual2/Blog-mongo/issues"
+  },
+  "homepage": "https://github.com/davidpascual2/Blog-mongo#readme"
+}
