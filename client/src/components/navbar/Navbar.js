@@ -6,41 +6,28 @@ import './navbar.css';
 export default function Navbar() {
     
     const {user, dispatch} = useContext(Context);
-    const PF = 'http://localhost:3001/images/'
 
     const handleLogout = () =>{
         dispatch({ type:"LOGOUT" })
     }
 
+//============================================
+
     return (
         <div className='top'>
             <div className="topLeft">
-                <i className="topIcon fa-brands fa-linkedin"></i>
-                <i className="topIcon fa-brands fa-instagram"></i>
-                <i className="topIcon fa-brands fa-twitter"></i>
-                <i className="topIcon fa-brands fa-pinterest"></i>
+                <Link to='/' className='link'>
+                    <b className='logo'>Chirp</b>
+                </Link>
             </div>
-            <div className="topCenter">
-                <ul className="topList">
-                    <li className="topListItem">
-                        <Link className='link' to='/'>HOME</Link>
-                    </li>
-                    <li className="topListItem" ><Link className='link' to='/'>ABOUT</Link></li>
-                    <li className="topListItem"><Link className='link' to='/'>CONTACT</Link></li>
-                    <li className="topListItem"><Link className='link' to='/write'>WRITE</Link></li>
-                    <li className="topListItem" onClick={ handleLogout }>{user && 'LOGOUT'}</li>
-                </ul>
-                
-            </div>
+
+            <div className="topCenter"></div>
+
             <div className="topRight">
                 {
                     user ? (
-                        <Link to='/settings'>
-                            <img 
-                                className='topImg' 
-                                src={PF+user.profilePic} 
-                                alt="" 
-                            />
+                        <Link to='/settings' className='link'>
+                            <b>{user.username}</b>
                         </Link>
 
                     ) : (
@@ -54,8 +41,16 @@ export default function Navbar() {
                         </ul>
                     )
                 }
-                <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
                 
+                <span className="topPostContainer" onClick={ handleLogout }> 
+                        {user ? (
+                            <span className='topPostIcon' onClick={ handleLogout }>
+                                <b>Logout</b>
+                            </span>
+                        ) : (
+                            <div></div>
+                        )}
+                </span>
             </div>
         </div>
 

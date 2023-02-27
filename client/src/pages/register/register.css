@@ -10,53 +10,56 @@
     rgba(255,255,255,0.5), 
     rgba(255,255,255,0.5)
     ), 
-     url('../../assets/retrosupply-jLwVAUtLOAQ-unsplash.jpg');
+     url('../../assets/mountains-bg.jpg');
     background-size: cover;
 }
 
 .registerTitle{
-    font-size: 50px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: 600;
 }
 
 .registerForm{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    padding: 50px;
+    background-color: white;
+    width: 200px;
+    gap: 20px;
+    border-radius: 10px;
 }
 
 .registerForm > label{
     margin: 10px 0;
 }
 
+.registerForm > span{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
 .registerInput{
     padding: 10px;
     background-color: white;
     border: none;
-    border-radius: 5px;
+    border-bottom: 1px solid grey;
 }
 
 .registerButton{
-    margin-top: 20px;
+    margin-top: 5px;
     cursor: pointer;
-    background-color: teal;
+    background-color: #00acee;
     border: none;
     color: white;
     border-radius: 10px;
     padding: 10px;
 }
 
-.registerLoginButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: lightcoral;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-
-
+.registerButton:hover{
+    background-color: #0193cd;
 }
 
 .registerErr{
