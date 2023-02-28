@@ -1,4 +1,4 @@
-const {connect, connection} = require('mongoose')
+const { connection} = require('mongoose')
 const mongoose = require('mongoose')
 
 // const connectionString =
