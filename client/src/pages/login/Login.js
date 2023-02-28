@@ -6,6 +6,8 @@ import './login.css';
 
 export default function Login() {
 
+  const apiUrl = 'https://chirp.herokuapp.com';
+
   const [loginError, setloginError] = useState(false); //can context handle this? (user error)
   const navigate = useNavigate()
   const userRef = useRef();
@@ -17,7 +19,7 @@ export default function Login() {
     setloginError(false)
     dispatch({ type:"LOGIN_START"});
     try{
-      const res = await axios.post('http://localhost:3001/api/auth/login', {
+      const res = await axios.post(`${apiUrl}/api/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

@@ -5,6 +5,8 @@ import { Context } from '../../context/Context';
 import axios from 'axios';
 
 export default function Settings() {
+    const apiUrl = 'https://chirp.herokuapp.com';
+    
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -23,7 +25,7 @@ export default function Settings() {
         };
 
         try {
-            const res = await axios.put('http://localhost:3001/api/users/'+user._id, updatedUser);
+            const res = await axios.put(`${apiUrl}/api/users/`+user._id, updatedUser);
             setSuccess(true);
             dispatch({type:"UPDATE_SUCCESS", payload: res.data })
         } catch (err) {

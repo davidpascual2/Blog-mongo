@@ -4,6 +4,8 @@ import { Context } from '../../context/Context';
 import './write.css'
 
 export default function Write() {
+    const apiUrl = 'https://chirp.herokuapp.com';
+
 
     const [desc, setDesc] = useState("");
     const { user } = useContext(Context);
@@ -16,8 +18,8 @@ export default function Write() {
         };
         try {
             
-            const res = await axios.post('http://localhost:3001/api/posts', newPost);
-            window.location.replace('http://localhost:3000/post/' + res.data._id); //CHANGES WINDOW LOCATION ON CLIENT SIDE (PORT!!!)
+            const res = await axios.post(`${apiUrl}/api/posts`, newPost);
+            window.location.replace(`${apiUrl}/post/` + res.data._id); //CHANGES WINDOW LOCATION ON CLIENT SIDE (PORT!!!)
             console.log(res)
         } catch (err) {
             console.log(err)

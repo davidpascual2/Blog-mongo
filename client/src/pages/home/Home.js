@@ -8,13 +8,15 @@ import { RightMenu } from '../../components/rightMenu/RightMenu';
 
 export default function Home() {
 
+  const apiUrl = 'https://chirp.herokuapp.com';
+
   const [posts, setPosts] = useState([]);
   const {search} = useLocation(); //take search property from console
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/posts' + search);
+        const res = await axios.get(`${apiUrl}/api/posts` + search);
         setPosts(res.data); // update posts state with fetched data
       } catch (error) {
         console.error(error);
