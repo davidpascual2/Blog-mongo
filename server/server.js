@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/connection');
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 // const mongoose = require('mongoose');
 const cors = require('cors')
