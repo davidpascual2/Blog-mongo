@@ -2,10 +2,13 @@ const express = require('express');
 const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
-// const mongoose = require('mongoose');
+const serveStatic = require('serve-static');
 const cors = require('cors')
 const path = require('path'); //not necessary to npm i path
 const routes = require('./routes');
+
+app.use(serveStatic(path.join(__dirname, 'client/build')));
+
 app.use(express.json());
 app.use(cors())
 
