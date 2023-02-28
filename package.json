@@ -20,5 +20,8 @@
   "homepage": "https://github.com/davidpascual2/Blog-mongo#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
