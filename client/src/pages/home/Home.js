@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:3001/api/posts' + search);
+        const res = await axios.get('/api/posts' + search);
         setPosts(res.data); // update posts state with fetched data
       } catch (error) {
         console.error(error);

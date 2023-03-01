@@ -16,8 +16,8 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try{
-      const res = await axios.post('http://localhost:3001/api/auth/register', {
-        username,
+      const res = await axios.post('/api/auth/register', {
+        username: username.toLowerCase(),
         email,
         password,
       });

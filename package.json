@@ -19,6 +19,7 @@
   "bugs": {
     "url": "https://github.com/davidpascual2/Blog-mongo/issues"
   },
+  "homepage": "https://github.com/davidpascual2/Blog-mongo#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
   },
