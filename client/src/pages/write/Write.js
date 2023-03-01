@@ -24,7 +24,7 @@ export default function Write() {
         }
     }
 
-//============================================
+//=============================================
   return (
     <div className='write'>
         <form className="writeForm" onSubmit={handleSubmit}>
