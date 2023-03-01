@@ -16,7 +16,7 @@ export default function Write() {
         };
         try {
             
-            const res = await axios.post('http://localhost:3001/api/posts', newPost);
+            const res = await axios.post('/api/posts', newPost);
             window.location.replace('http://localhost:3000/post/' + res.data._id); //CHANGES WINDOW LOCATION ON CLIENT SIDE (PORT!!!)
             console.log(res)
         } catch (err) {

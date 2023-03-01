@@ -15,7 +15,7 @@ export default function SinglePost() {
 
   useEffect(()=>{
     const getPost = async ()=>{
-      const res = await axios.get('http://localhost:3001/api/posts/' + path);
+      const res = await axios.get('/api/posts/' + path);
       setPost(res.data);
       setDesc(res.data.desc)
       console.log(res)
@@ -25,7 +25,7 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/api/posts/${post._id}`, {
+      await axios.delete(`/api/posts/${post._id}`, {
         data: { username: user.username },
       });
       window.location.replace("/");
@@ -34,7 +34,7 @@ export default function SinglePost() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:3001/api/posts/${post._id}`, 
+      await axios.put(`/api/posts/${post._id}`, 
         { username: user.username, 
           desc,
         });
