@@ -17,7 +17,7 @@ export default function Login() {
     setloginError(false)
     dispatch({ type:"LOGIN_START"});
     try{
-      const res = await axios.post('http://localhost:3001/api/auth/login', {
+      const res = await axios.post('/api/auth/login', {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import './write.css'
 
 export default function Write() {
-
+    const navigate = useNavigate()
     const [desc, setDesc] = useState("");
     const { user } = useContext(Context);
     const handleSubmit =  async (e) => {
@@ -16,15 +17,16 @@ export default function Write() {
         };
         try {
             
-            const res = await axios.post('http://localhost:3001/api/posts', newPost);
-            window.location.replace('http://localhost:3000/post/' + res.data._id); //CHANGES WINDOW LOCATION ON CLIENT SIDE (PORT!!!)
+            const res = await axios.post('/api/posts', newPost);
+            // window.location.replace('http://localhost:3000/post/' + res.data._id); //CHANGES WINDOW LOCATION ON CLIENT SIDE (PORT!!!)
+            navigate('/');
             console.log(res)
         } catch (err) {
             console.log(err)
         }
     }
 
-//============================================
+//=============================================
   return (
     <div className='write'>
         <form className="writeForm" onSubmit={handleSubmit}>
