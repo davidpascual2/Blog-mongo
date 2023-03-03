@@ -8,7 +8,7 @@ This is a full-stack web application using a MVC paradigm and utilizes Node.js f
 This application requires node.js.
 
 to run the application locally:
-* fork or clone the repository from GitHub and install all dependecies withn`npm i` in root directory
+* fork or clone the repository from GitHub and install all dependecies withn `npm i` in root directory
 * type `npm run develop` in root directory
 
 ## Tech
