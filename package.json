@@ -24,6 +24,6 @@
     "concurrently": "^7.6.0"
   },
   "dependencies": {
-  
+    "mongoose": "^8.7.2"
   }
 }
